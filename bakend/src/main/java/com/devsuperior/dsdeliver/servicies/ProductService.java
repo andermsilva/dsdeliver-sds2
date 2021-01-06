@@ -25,5 +25,11 @@ public class ProductService {
 
 		return list.stream().map(x -> new ProductDTO(x)).collect(Collectors.toList());
 	}
-
+//	
+//	@Transactional(readOnly = true)
+//    public List<ProductDTO> findAll(){
+//        List<Product> list = repository.findAll();
+//        return list.stream().map(x -> new ProductDTO(x)).collect(Collectors.toList());
+//    }
+//
 }
