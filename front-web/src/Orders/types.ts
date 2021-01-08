@@ -1,4 +1,5 @@
 import { type } from "os"
+import { NumericLiteral } from "typescript"
 
 export type Product ={
 
@@ -9,9 +10,19 @@ export type Product ={
     imageUri:string;
 
 }
-export type OrderLocationdata = {
+export type OrderLocationData = {
    
     latitude: number,
     longitude: number,
      address: string
 }
+
+
+type ProductId ={
+    id:Number;
+
+}
+
+export type OrderPayload = {
+    products: ProductId[];
+}& OrderLocationData;
