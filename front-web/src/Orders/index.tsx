@@ -9,7 +9,7 @@ import StepsHeader from './StepsHeader';
 import OrderSummary from './OrderSummary';
 import Footer from '../Footer';
 import './styles.css';
-import { isNullishCoalesce } from 'typescript';
+
 
 function Orders() {
     const [products, setProducts] = useState<Product[]>([]);
@@ -24,7 +24,7 @@ function Orders() {
     useEffect(() => {
         fectchProducts().then(response => setProducts(response.data))
             .catch(() => {
-                toast.warning('erro ao carregar produtos');
+                toast.warning('Erro ao carregar produtos');
             });
 
     }, []);
@@ -52,7 +52,7 @@ function Orders() {
            saveOrder(payload).then((response) => {
              toast.error(`Pedido enviado com sucesso! Nº ${response.data.id}` );
              setSelectedProducts([]);
-                
+                           
              toast.error(`Endereço: ${response.data.address}` );
              setSelectedProducts([]);
            })

@@ -1,6 +1,3 @@
-import { type } from "os"
-import { NumericLiteral } from "typescript"
-
 export type Product ={
 
     id: number,
