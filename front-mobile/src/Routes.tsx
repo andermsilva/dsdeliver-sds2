@@ -3,6 +3,8 @@ import { createStackNavigator } from '@react-navigation/stack';
 import React from 'react';
 import Home from "./Home";
 import Orders from "./Orders";
+import OrderDatails from '../src/OrderDetails'
+
 
 const Stack = createStackNavigator ();
 function Routes(){
@@ -20,6 +22,7 @@ function Routes(){
 
               <Stack.Screen name='Home' component={Home}></Stack.Screen>     
               <Stack.Screen name='Orders' component={Orders}></Stack.Screen>   
+              <Stack.Screen name='OrderDatails' component={OrderDatails}></Stack.Screen>   
              </Stack.Navigator>
         </NavigationContainer>
     );
